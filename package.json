@@ -10,7 +10,7 @@
     "url": "https://github.com/DriveWealth/react-native-onepassword"
   },
   "dependencies": {
-    "1PasswordExtension": "git+https://github.com/jjshammas/onepassword-app-extension.git"
+    "1PasswordExtension": "git+https://github.com/scriptdash/onepassword-app-extension.git#bc62309059ef27b38c7cda597d9f9447b3a63f87"
   },
   "devDependencies": {},
   "peerDependencies": {
