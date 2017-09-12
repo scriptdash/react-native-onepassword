@@ -1,5 +1,7 @@
 # react-native-onepassword
 
+**This fork implements a few PRs on upstream (very basic android support, rn 0.48 support), and updates the upstream the onepassword extension**
+
 React Native integration with the OnePassword extension.
 
 ## Install
