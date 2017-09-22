@@ -50,4 +50,5 @@ OnePassword.findLogin("https://example.com/login")
     doSomethingWith(credentials.username);
     doSomethingElseWith(credentials.password);
 })
+.catch((error) => console.log(error.message))
 ```

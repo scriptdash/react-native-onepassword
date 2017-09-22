@@ -20,7 +20,7 @@ var OnePassword = {
         return new Promise(function(resolve, reject) {
             NativeOnePassword.findLogin(url, function(error, data) {
                 if (error) {
-                    return reject(error.message);
+                    return reject(error);
                 }
 
                 resolve(data);
