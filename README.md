@@ -18,23 +18,27 @@ React Native integration with the OnePassword extension.
 
 ### Public Methods
 
-**isSupported(): Promise**  
-Checks if the OnePassword extension is availabile on the current platform.
+**isSupported(): Promise**
+Checks if the OnePassword extension is available on the current platform.
 
 ```
 var OnePassword = require("react-native-onepassword");
 OnePassword.isSupported()
-    .then(
-        () => {
-            console.log("OnePassword app is installed and ready!")
-        },
-        () => {
-            console.log("OnePassword not available.");
-        }
-    );
+  .then((isSupported) => {
+      if (isSupported) {
+          console.log("OnePassword app is installed and ready!")
+      }
+      else {
+          console.log("OnePassword not available.");
+      }
+  })
+
+// or with async/await
+
+const isSupported = await OnePassword.isSupported()
 ```
 
-**findLogin(url:String): Promise**  
+**findLogin(url:String): Promise**
 Opens the OnePassword extension, filtering the list of logins by the URL you provide. When the user selects a login, the credentials are passed to the callback function as plaintext.
 
 If you are unsure what URL to pass, see the [OnePassword documentation](https://github.com/AgileBits/onepassword-app-extension#best-practices).

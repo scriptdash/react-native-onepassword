@@ -9,13 +9,9 @@ var NativeOnePassword = NativeModules.OnePassword;
 
 var OnePassword = {
     isSupported() {
-        return new Promise(function(resolve, reject) {
+        return new Promise(function(resolve) {
             NativeOnePassword.isSupported(function(error) {
-                if (error) {
-                    return reject(error.message);
-                }
-
-                resolve(true);
+                resolve(!error);
             });
         });
     },
